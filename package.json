@@ -1,0 +1,36 @@
+{
+  "name": "colby-wp-pdf-embed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-webpack": "^1.0.0",
+    "css-loader": "^0.28.4",
+    "eslint-config-johnwatkins0": "^1.0.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-autodeploy-wp": "^1.0.20",
+    "node-sass": "^4.5.2",
+    "postcss-loader": "^2.0.5",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.0",
+    "webpack-bundle-analyzer": "^2.9.0"
+  },
+  "dependencies": {
+    "pdfobject": "^2.0.201604172"
+  },
+  "babel": {
+    "presets": ["es2015", "react"]
+  },
+  "eslintConfig": {
+    "extends": ["johnwatkins0"]
+  }
+}
