@@ -1,8 +1,8 @@
 {
   "name": "colby-wp-pdf-embed",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A WordPress shortcode for embedding pdfs. [pdf-embed url=\"//full-pdf-url\"]",
+  "main": "index.php",
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -10,7 +10,6 @@
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "babel-webpack": "^1.0.0",
     "css-loader": "^0.28.4",
@@ -28,7 +27,7 @@
     "pdfobject": "^2.0.201604172"
   },
   "babel": {
-    "presets": ["es2015", "react"]
+    "presets": ["es2015"]
   },
   "eslintConfig": {
     "extends": ["johnwatkins0"]

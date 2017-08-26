@@ -1,13 +1,19 @@
 import PDFObject from 'pdfobject';
 
-window.addEventListener('load', () => {
-  const container = document.getElementById('pdf-embed');
-  if (!container) {
-    return;
-  }
+const init = () => {
+  Array.prototype.forEach.call(
+    document.querySelectorAll('[data-pdf-embed]'),
+    (container) => {
+      PDFObject.embed(
+        container.getAttribute('data-url'),
+        `#${container.getAttribute('id')}`,
+        {
+          height: '600px',
+          pdfOpenParams: { view: 'FitV' },
+        }
+      );
+    }
+  );
+};
 
-  PDFObject.embed(container.getAttribute('data-url'), '#pdf-embed', {
-    height: '600px',
-    pdfOpenParams: { view: 'FitV' },
-  });
-});
+window.addEventListener('load', init);

@@ -348,18 +348,16 @@ var _pdfobject2 = _interopRequireDefault(_pdfobject);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-window.addEventListener('load', function () {
-  var container = document.getElementById('pdf-embed');
-  if (!container) {
-    return;
-  }
-
-  _pdfobject2.default.embed(container.getAttribute('data-url'), '#pdf-embed', {
-    height: '600px',
-    pdfOpenParams: { view: 'FitV' }
+var init = function init() {
+  Array.prototype.forEach.call(document.querySelectorAll('[data-pdf-embed]'), function (container) {
+    _pdfobject2.default.embed(container.getAttribute('data-url'), '#' + container.getAttribute('id'), {
+      height: '600px',
+      pdfOpenParams: { view: 'FitV' }
+    });
   });
-});
+};
+
+window.addEventListener('load', init);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=colby-wp-pdf-embed.js.map
