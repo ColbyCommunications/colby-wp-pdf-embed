@@ -24,7 +24,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
 function generate_random_string( $length = 10 ) {
 	$characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	$characters_ength = strlen( $characters );
+	$characters_length = strlen( $characters );
 
 	$random_string = '';
 	for ( $i = 0; $i < $length; $i++ ) {
